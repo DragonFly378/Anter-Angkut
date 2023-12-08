@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import img_profile from "../../assets/images/foto_profile.jpeg";
+import { Link } from "react-router-dom";
 
 const Topbar = () => {
   return (
@@ -13,13 +14,13 @@ const Topbar = () => {
           <div className="button-ba my-auto">
             <FontAwesomeIcon icon={faBars} className="text-white text-2xl" />{" "}
           </div>
-          <div className="profile-pic w-11 ">
+          <Link to={"/account"} className="profile-pic w-11 ">
             <img
               src={img_profile}
               alt="foto profil"
               className="rounded-full object-cover w-[44px] h-[44px]"
             />
-          </div>
+          </Link>
         </div>
       </section>
     </>

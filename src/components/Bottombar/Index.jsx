@@ -37,7 +37,7 @@ const ButtonBottomBar = ({
   return (
     <Component
       to={target}
-      className={`inline-flex flex-col items-center justify-center px-5 hover:bg-peach group text-primary hover:text-light-soft
+      className={`inline-flex flex-col items-center justify-center px-5 hover:bg-peach group text-primary hover:text-primary
     ${active !== "/" && active === target && `bg-blue-soft `}`}
     >
       <div className="icon">
