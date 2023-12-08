@@ -9,9 +9,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Topbar active={path} />
+      <Topbar />
       {children}
-      <Bottombar />
+      <Bottombar active={path} />
     </>
   );
 };
