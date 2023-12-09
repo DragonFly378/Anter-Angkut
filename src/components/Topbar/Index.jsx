@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 const Topbar = () => {
   return (
     <>
-      <section className="topbar-section mx-auto max-w-md fixed py-5 left-0 right-0 top-0 z-40">
-        <div className="topbar-brand w-11/12 py-3 flex my-auto justify-between mx-auto">
+      <section className="topbar-section mx-auto max-w-md fixed py-3 left-0 right-0 top-0 z-40">
+        <div className="topbar-brand w-11/12 py-2 flex my-auto justify-between mx-auto">
           <div className="button-ba my-auto">
             <FontAwesomeIcon icon={faBars} className="text-white text-2xl" />{" "}
           </div>

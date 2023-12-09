@@ -7,7 +7,7 @@ const Bottombar = ({ active }) => {
   // console.log(active);
   return (
     <>
-      <section className="bottombar-section fixed max-w-md mx-auto bottom-0 left-0 right-0 z-50 w-full h-16 bg-light-soft border-t dark:bg-light-soft">
+      <section className="bottombar-section fixed max-w-md mx-auto bottom-0 left-0 right-0 z-50 w-full h-[72px] bg-light-soft border-t dark:bg-light-soft">
         <div className="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
           {bottombars.map((item, itemIdx) => {
             return (
@@ -37,14 +37,14 @@ const ButtonBottomBar = ({
   return (
     <Component
       to={target}
-      className={`inline-flex flex-col items-center justify-center px-5 hover:bg-peach group text-primary hover:text-primary
+      className={`inline-flex flex-col items-center justify-center px-5 gap-y-1 hover:bg-peach group text-primary hover:text-primary
     ${active !== "/" && active === target && `bg-blue-soft `}`}
     >
       <div className="icon">
-        <img src={icon} alt="icon-bottombar" className="icon-img" />
+        <img src={icon} alt="icon-bottombar" className="icon-img w-9" />
         {/* {icon} */}
       </div>
-      <span className="text-sm ">{text}</span>
+      <span className="text-xs">{text}</span>
     </Component>
   );
 };
