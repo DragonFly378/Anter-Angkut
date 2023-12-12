@@ -1,21 +1,26 @@
 import React from "react";
-import { ListsArmadaCategory } from "../../datas";
 import { Link } from "react-router-dom";
 
-const ArmadaCategory = () => {
+const ArmadaCategory = ({ datas }) => {
   return (
     <>
       <div className="kategori-armada mt-8">
         <div className="grid grid-cols-4 gap-x-1 mx-auto ">
-          {ListsArmadaCategory.several.map((item, itemIdx) => {
+          {datas.map((item, itemIdx) => {
             return (
               <>
                 <Link
                   to={item.link}
                   key={itemIdx}
-                  className="jenis-armada  grid-cols-1 rounded-sm bg-white shadow-lg text-primary flex flex-col "
+                  className="jenis-armada grid-cols-1 rounded-md bg-white shadow-[0_0px_13px_3px_rgba(188,188,188,0.25)] text-primary flex flex-col py-4 gap-y-2"
                 >
-                  <div className="icon">{item.title}</div>
+                  <img
+                    src={item.icon}
+                    alt="icon-bottombar"
+                    className="icon-img h-9 mx-auto "
+                  />
+
+                  {/* <div className="icon">{item.icon}</div> */}
                   <div className="title font-medium text-xs mx-auto">
                     {item.title}
                   </div>

@@ -38,55 +38,87 @@ export const ListsArmadaCategory = {
   several: [
     {
       title: "Commuterline",
-      icon: "",
+      icon: commuterIcon,
       link: "/pilih-kendaraan/commuterline",
     },
     {
       title: "Transjakarta",
-      icon: "",
+      icon: transjakartaIcon,
       link: "/pilih-kendaraan/transjakarta",
     },
     {
       title: "MRT",
-      icon: "",
+      icon: mrtIcon,
       link: "/pilih-kendaraan/mrt",
     },
     {
       title: "Lainnya",
-      icon: "",
+      icon: lainnya,
       link: "/pilih-kendaraan",
     },
   ],
   all: [
     {
       title: "Commuterline",
-      icon: "",
+      icon: commuterIcon,
       link: "/pilih-kendaraan/commuterline",
     },
     {
       title: "Transjakarta",
-      icon: "",
+      icon: transjakartaIcon,
       link: "/pilih-kendaraan/transjakarta",
     },
     {
       title: "MRT",
-      icon: "",
+      icon: mrtIcon,
       link: "/pilih-kendaraan/mrt",
     },
     {
-      title: "Commuterline",
-      icon: "",
-      link: "/pilih-kendaraan/commuterline",
+      title: "Jaklingko",
+      icon: jaklingkoIcon,
+      link: "/pilih-kendaraan/jaklingko",
     },
     {
-      title: "Transjakarta",
-      icon: "",
-      link: "/pilih-kendaraan/transjakarta",
+      title: "LRT",
+      icon: lrtIcon,
+      link: "/pilih-kendaraan/lrt",
     },
     {
-      title: "MRT",
-      icon: "",
-      link: "/pilih-kendaraan/mrt",
+      title: "DAMRI",
+      icon: damriIcon,
+      link: "/pilih-kendaraan/damri",
+    },
+    {
+      title: "KRL Bandara",
+      icon: krlbandaraIcon,
+      link: "/pilih-kendaraan/krlbandara",
     },
   ],
 };
+
+export const DataStations = [
+  {
+    title: "St Juanda",
+    distance: "1 km",
+    status: "Lancar",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
+    title: "St Mangga Besar",
+    distance: "3 km",
+    status: "Padat",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
+    title: "St Cikini",
+    distance: "2 km",
+    status: "Lancar",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
+    title: "St Gondangdia",
+    distance: "4 km",
+    status: "Lancar",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+];
