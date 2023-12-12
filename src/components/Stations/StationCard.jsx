@@ -26,7 +26,7 @@ const StationCard = ({ itemIdx, data }) => {
               <div className="title text-sm">Status</div>{" "}
               <div
                 className={`title mx-auto px-5 rounded-xl font-semibold text-sm bg-${
-                  data.status == "Lancar" ? "blue-mid" : "merah-terang"
+                  data.status == "Lancar" ? "green-400" : "merah-terang"
                 } text-${data.status == "Lancar" ? "primary" : "light-soft"}`}
               >
                 {data.status}

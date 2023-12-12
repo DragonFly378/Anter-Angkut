@@ -7,6 +7,7 @@ export default {
     "bg-primary",
     "bg-light-soft",
     "text-light-soft",
+    "bg-green-400",
   ],
   theme: {
     extend: {
