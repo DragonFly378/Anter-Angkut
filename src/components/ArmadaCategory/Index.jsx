@@ -5,7 +5,7 @@ const ArmadaCategory = ({ datas }) => {
   return (
     <>
       <div className="kategori-armada mt-8">
-        <div className="grid grid-cols-4 gap-x-1 mx-auto ">
+        <div className="grid grid-cols-4 gap-x-2 mx-auto ">
           {datas.map((item, itemIdx) => {
             return (
               <>
