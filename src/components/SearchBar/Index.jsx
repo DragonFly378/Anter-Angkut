@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SearchBar = ({ placeholder, searchValue, setSearchValue }) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const pathname = location.pathname;
+
   const [searchInput, setSearchInput] = useState("");
 
   const handleChange = (e) => {
@@ -15,11 +18,12 @@ const SearchBar = ({ placeholder, searchValue, setSearchValue }) => {
   const onSearch = (e) => {
     e.preventDefault();
     setSearchValue(searchInput);
-    navigate(`/search-place/${searchInput}`);
+    navigate(`${pathname == "/" ? "search-place" : pathname}/${searchInput}`);
   };
 
   useEffect(() => {
     setSearchInput(searchValue);
+    console.log(pathname);
   }, []);
 
   return (

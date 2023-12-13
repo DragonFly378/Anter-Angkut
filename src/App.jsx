@@ -16,6 +16,10 @@ function App() {
             <Route path="/schedules" element={<PilihArmada />} />
             <Route path="/armada/" element={<PilihArmada />} />
             <Route path="/armada/:category" element={<ArmadaStation />} />
+            <Route
+              path="/armada/:category/:armada"
+              element={<ArmadaStation />}
+            />
             <Route path="/search-place" element={<PlaceSearch />} />
             <Route path="/search-place/:placeName" element={<PlaceSearch />} />
             <Route path="/account" element={<AkunPage />} />

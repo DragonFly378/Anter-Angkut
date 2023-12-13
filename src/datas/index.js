@@ -202,6 +202,14 @@ export const DataStations = [
     link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
   },
   {
+    title: "St Cikini",
+    distance: "2 km",
+    status: "Lancar",
+    type: "stasiun",
+    armada: "commuterline",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
     title: "St Gondangdia",
     distance: "4 km",
     status: "Padat",
@@ -215,6 +223,14 @@ export const DataStations = [
     status: "Padat",
     type: "stasiun",
     armada: "commuterline",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
+    title: "St Bundaran HI",
+    distance: "4 km",
+    status: "Padat",
+    type: "stasiun",
+    armada: "mrt",
     link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
   },
   {
@@ -234,6 +250,22 @@ export const DataStations = [
     link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
   },
   {
+    title: "St Ciracas",
+    distance: "7 km",
+    status: "Padat",
+    type: "stasiun",
+    armada: "lrt",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
+    title: "St Cawang",
+    distance: "4 km",
+    status: "Padat",
+    type: "stasiun",
+    armada: "lrt",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
     title: "St Pasar Minggu",
     distance: "1 km",
     status: "Lancar",
@@ -247,6 +279,14 @@ export const DataStations = [
     status: "Padat",
     type: "stasiun",
     armada: "commuterline",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
+    title: "St Cikunir",
+    distance: "7 km",
+    status: "Padat",
+    type: "stasiun",
+    armada: "lrt",
     link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
   },
 ];

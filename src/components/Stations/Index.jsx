@@ -11,7 +11,8 @@ const Stations = ({ datas, searchValue, type }) => {
             if (type) {
               return (
                 item.title.toLowerCase().includes(searchValue?.toLowerCase()) &&
-                item.type.toLowerCase().includes(type?.toLowerCase())
+                (item.type.toLowerCase().includes(type?.toLowerCase()) ||
+                  item.armada.toLowerCase().includes(type?.toLowerCase()))
               );
             }
             return item.title

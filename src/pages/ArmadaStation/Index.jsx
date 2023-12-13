@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "../../layout";
+import SearchBar from "../../components/SearchBar/Index";
+import Stations from "../../components/Stations/Index";
+import { DataStations } from "../../datas";
 
 const ArmadaStation = () => {
+  const [searchValue, setSearchValue] = useState("");
   const { category } = useParams();
   console.log(category);
 
@@ -20,8 +24,25 @@ const ArmadaStation = () => {
                 ? "stasiun"
                 : "halte"}{" "}
               mana hari ini?
+              {category}
             </h2>
-            {category}
+
+            <SearchBar
+              placeholder={"Cari stasiun / halte"}
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+            />
+
+            <div className="stasiun mt-8">
+              <h2 className="title leading-[normal] text-[20px] font-bold mb-3">
+                {category ? "Stasiun / Halte" : "Stasiun terdekat kamu"}
+              </h2>
+              <Stations
+                datas={DataStations}
+                searchValue={searchValue}
+                type={category}
+              />
+            </div>
           </section>
         </Layout>
       </div>
