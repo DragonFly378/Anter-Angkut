@@ -2,7 +2,7 @@ import React from "react";
 import Stations from "../../components/Stations/Index";
 import { DataStations } from "../../datas";
 
-const NearStation = ({searchValue}) => {
+const NearStation = ({ searchValue }) => {
   return (
     <>
       <div className="stasiun-terdekat mt-8">

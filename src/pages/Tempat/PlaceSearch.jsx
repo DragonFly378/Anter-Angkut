@@ -79,7 +79,11 @@ const PlaceSearch = () => {
                   <h2 className="title leading-[normal] text-[20px] font-bold mb-3">
                     {placeName ? "Stasiun / Halte" : "Stasiun terdekat kamu"}
                   </h2>
-                  <Stations datas={DataStations} searchValue={searchValue} />
+                  <Stations
+                    datas={DataStations}
+                    searchValue={searchValue}
+                    type="stasiun"
+                  />
                 </div>
               </div>
             </>

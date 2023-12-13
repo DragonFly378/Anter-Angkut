@@ -2,14 +2,22 @@ import React from "react";
 import "./station.scss";
 import StationCard from "./StationCard";
 
-const Stations = ({ datas, searchValue }) => {
+const Stations = ({ datas, searchValue, type }) => {
   return (
     <>
       <div className="lists-station flex flex-col gap-y-3">
         {datas
-          ?.filter((item) =>
-            item.title.toLowerCase().includes(searchValue?.toLowerCase())
-          )
+          ?.filter((item) => {
+            if (type) {
+              return (
+                item.title.toLowerCase().includes(searchValue?.toLowerCase()) &&
+                item.type.toLowerCase().includes(type?.toLowerCase())
+              );
+            }
+            return item.title
+              .toLowerCase()
+              .includes(searchValue?.toLowerCase());
+          })
           .slice(0, 4)
           .map((item, itemIdx) => {
             return (
