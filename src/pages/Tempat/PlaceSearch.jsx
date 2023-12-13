@@ -10,10 +10,12 @@ import SearchBar from "../../components/SearchBar/Index";
 
 const PlaceSearch = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [searchValue, setSearchValue] = useState("");
+
   const location = useLocation();
 
   const { placeName } = useParams();
-  console.log(placeName);
+  // console.log(placeName);
 
   useEffect(() => {
     // Simulating an asynchronous operation
@@ -27,6 +29,9 @@ const PlaceSearch = () => {
 
   useEffect(() => {
     console.log(location.state);
+    if (placeName) {
+      setSearchValue(placeName);
+    }
   }, []);
 
   return (
@@ -46,7 +51,11 @@ const PlaceSearch = () => {
                 <h1 className="text-2xl font-bold">Mau kemana hari ini?</h1>
                 {/* <div className="text">{placeName}</div> */}
 
-                <SearchBar placeholder={placeName} />
+                <SearchBar
+                  placeholder={placeName}
+                  searchValue={searchValue}
+                  setSearchValue={setSearchValue}
+                />
 
                 {placeName ? (
                   <div className="result text-base mt-2">
@@ -63,14 +72,14 @@ const PlaceSearch = () => {
                   <h2 className="title leading-[normal] text-[20px] font-bold mb-3">
                     {placeName ? "Tempat" : "Tempat terdekat kamu"}
                   </h2>
-                  <Places datas={DataPlaces} />
+                  <Places datas={DataPlaces} searchValue={searchValue} />
                 </div>
 
                 <div className="stasiun mt-8">
                   <h2 className="title leading-[normal] text-[20px] font-bold mb-3">
                     {placeName ? "Stasiun / Halte" : "Stasiun terdekat kamu"}
                   </h2>
-                  <Stations datas={DataStations} />
+                  <Stations datas={DataStations} searchValue={searchValue} />
                 </div>
               </div>
             </>

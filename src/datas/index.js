@@ -118,30 +118,85 @@ export const DataStations = [
   {
     title: "St Gondangdia",
     distance: "4 km",
+    status: "Padat",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
+    title: "St Tanah Abang",
+    distance: "7 km",
+    status: "Padat",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
+    title: "St Kota",
+    distance: "4 km",
+    status: "Padat",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
+    title: "St Depok",
+    distance: "16 km",
     status: "Lancar",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
+    title: "St Pasar Minggu",
+    distance: "1 km",
+    status: "Lancar",
+    link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+  {
+    title: "St Klender",
+    distance: "12 km",
+    status: "Padat",
     link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
   },
 ];
 
 export const DataPlaces = [
   {
-    title: "Kebun Binatang Ragunan, Jawa Barat",
+    title: "Kebun Binatang Ragunan, Jakarta Selatan",
     distance: "3km",
     armada: [transjakartaIcon, krlbandaraIcon, mrtIcon],
   },
   {
-    title: "Kebun Binatang Ragunan, Jawa Barat",
+    title: "Ayam Geprek Juanda, Jakarta Pusat",
+    distance: "3km",
+    armada: [transjakartaIcon, commuterIcon],
+  },
+  {
+    title: "Family Mart Juanda, Jakarta Pusat",
+    distance: "3km",
+    armada: [transjakartaIcon, commuterIcon],
+  },
+  {
+    title: "Ragussa es Italia, Jakarta Pusat",
     distance: "3km",
     armada: [mrtIcon, lrtIcon],
   },
   {
-    title: "Kebun Binatang Ragunan, Jawa Barat",
+    title: "Lapangan Banteng, Jakarta Pusat",
     distance: "3km",
     armada: [krlbandaraIcon, jaklingkoIcon],
   },
   {
-    title: "Kebun Binatang Ragunan, Jawa Barat",
-    distance: "3km",
+    title: "Kopi Siliwangi Rawamagun, Jakarta Timur",
+    distance: "7km",
+    armada: [transjakartaIcon],
+  },
+  {
+    title: "Kopi Kayu Klender, Jakarta Timur",
+    distance: "5km",
     armada: [jaklingkoIcon],
+  },
+  {
+    title: "Kebun Bunga Mekarsari Bogor, Jawa Barat",
+    distance: "5km",
+    armada: [krlbandaraIcon, commuterIcon],
+  },
+  {
+    title: "Benteng Betawi Cipondoh, Jawa Barat",
+    distance: "5km",
+    armada: [commuterIcon],
   },
 ];

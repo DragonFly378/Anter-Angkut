@@ -1,21 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
-const SearchBar = ({ placeholder }) => {
+const SearchBar = ({ placeholder, searchValue, setSearchValue }) => {
   const navigate = useNavigate();
-  const [searchValue, setSearchValue] = useState("");
+  const [searchInput, setSearchInput] = useState("");
 
   const handleChange = (e) => {
-    setSearchValue(e.target.value);
-    console.log(searchValue);
+    setSearchInput(e.target.value);
+    console.log(setSearchInput);
   };
 
   const onSearch = (e) => {
     e.preventDefault();
-    navigate(`/search-place/${searchValue}`);
+    setSearchValue(searchInput);
+    navigate(`/search-place/${searchInput}`);
   };
+
+  useEffect(() => {
+    setSearchInput(searchValue);
+  }, []);
 
   return (
     <form
@@ -27,7 +32,7 @@ const SearchBar = ({ placeholder }) => {
         id="searchPlace"
         name="searchPlace"
         type="text"
-        value={searchValue}
+        value={searchInput}
         onChange={handleChange}
         placeholder={placeholder}
       />
