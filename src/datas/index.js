@@ -25,7 +25,7 @@ export const bottombars = [
   {
     text: "Tempat",
     icon: tempatIcon,
-    link: "/places",
+    link: "/search-place",
   },
   {
     text: "Akun",
@@ -54,7 +54,7 @@ export const ListsArmadaCategory = {
     {
       title: "Lainnya",
       icon: lainnya,
-      link: "/pilih-armada",
+      link: "",
     },
   ],
   all: [

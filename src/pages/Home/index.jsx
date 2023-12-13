@@ -11,11 +11,11 @@ import TrendingPlace from "./TrendingPlace";
 const HomePage = () => {
   return (
     <>
-      <div className="home-page ">
+      <div className="home-page">
         <Layout>
-          <section className="home-content mt-[83px] h-screen w-11/12 pt-2 mx-auto">
+          <section className="home-content mt-[83px] w-11/12 pt-2 mx-auto">
             <SummaryToday />
-            <SearchBar />
+            <SearchBar placeholder={"Mau kemana hari ini?"} />
             <ArmadaCategory datas={ListsArmadaCategory.several} />
             <NearStation />
             <TrendingPlace />

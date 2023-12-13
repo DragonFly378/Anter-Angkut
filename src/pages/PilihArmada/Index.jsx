@@ -12,7 +12,7 @@ const PilihArmada = () => {
     <>
       <div className="pilih-armada">
         <Layout>
-          <div className="piliharmada-content mt-[103px] h-screen w-11/12 mx-auto">
+          <div className="piliharmada-content mt-[103px] w-11/12 mx-auto">
             <h2 className="title leading-[normal] text-[20px] font-bold">
               {pathname === "/schedules"
                 ? "Silahkan pilih armada"

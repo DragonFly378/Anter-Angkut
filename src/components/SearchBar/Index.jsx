@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
-const SearchBar = () => {
+const SearchBar = ({ placeholder }) => {
   const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState("");
 
@@ -14,7 +14,7 @@ const SearchBar = () => {
 
   const onSearch = (e) => {
     e.preventDefault();
-    navigate("/place");
+    navigate(`/search-place/${searchValue}`);
   };
 
   return (
@@ -29,7 +29,7 @@ const SearchBar = () => {
         type="text"
         value={searchValue}
         onChange={handleChange}
-        placeholder="Mau kemana hari ini?"
+        placeholder={placeholder}
       />
       <FontAwesomeIcon
         icon={faMagnifyingGlass}

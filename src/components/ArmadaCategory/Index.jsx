@@ -10,8 +10,7 @@ const ArmadaCategory = ({ datas }) => {
             return (
               <>
                 <Link
-                  to={`/${item.link}`}
-                  replace
+                  to={`/armada/${item.link}`}
                   key={itemIdx}
                   className="jenis-armada grid-cols-1 rounded-md bg-white shadow-[0_0px_13px_3px_rgba(188,188,188,0.25)] text-primary flex flex-col py-4 gap-y-2"
                 >
