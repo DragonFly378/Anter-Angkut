@@ -1,4 +1,5 @@
 import React from "react";
+import "./station.scss";
 import StationCard from "./StationCard";
 
 const Stations = ({ datas }) => {

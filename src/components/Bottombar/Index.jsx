@@ -1,5 +1,5 @@
 import React from "react";
-import { bottombars } from "../../datas";
+import { bottombars, DataStations } from "../../datas";
 import { Link } from "react-router-dom";
 import "./bottombar.scss";
 
@@ -16,7 +16,6 @@ const Bottombar = ({ active }) => {
                 icon={item.icon}
                 text={item.text}
                 target={item.link}
-                as={Link}
                 active={active}
               />
             );
@@ -27,16 +26,12 @@ const Bottombar = ({ active }) => {
   );
 };
 
-const ButtonBottomBar = ({
-  icon,
-  text,
-  target,
-  as: Component = "button",
-  active,
-}) => {
+const ButtonBottomBar = ({ icon, text, target, active }) => {
+  // const datas = DataStations;
   return (
-    <Component
+    <Link
       to={target}
+      state={DataStations}
       className={`inline-flex flex-col items-center justify-center px-5 gap-y-1 hover:bg-peach group text-primary hover:text-primary
     ${active !== "/" && active === target && `bg-blue-soft `}`}
     >
@@ -45,7 +40,7 @@ const ButtonBottomBar = ({
         {/* {icon} */}
       </div>
       <span className="text-xs">{text}</span>
-    </Component>
+    </Link>
   );
 };
 

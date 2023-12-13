@@ -39,59 +39,59 @@ export const ListsArmadaCategory = {
     {
       title: "Commuterline",
       icon: commuterIcon,
-      link: "/pilih-kendaraan/commuterline",
+      link: "commuterline",
     },
     {
       title: "Transjakarta",
       icon: transjakartaIcon,
-      link: "/pilih-kendaraan/transjakarta",
+      link: "transjakarta",
     },
     {
       title: "MRT",
       icon: mrtIcon,
-      link: "/pilih-kendaraan/mrt",
+      link: "mrt",
     },
     {
       title: "Lainnya",
       icon: lainnya,
-      link: "/pilih-kendaraan",
+      link: "/pilih-armada",
     },
   ],
   all: [
     {
       title: "Commuterline",
       icon: commuterIcon,
-      link: "/pilih-kendaraan/commuterline",
+      link: "commuterline",
     },
     {
       title: "Transjakarta",
       icon: transjakartaIcon,
-      link: "/pilih-kendaraan/transjakarta",
+      link: "transjakarta",
     },
     {
       title: "MRT",
       icon: mrtIcon,
-      link: "/pilih-kendaraan/mrt",
+      link: "mrt",
     },
     {
       title: "Jaklingko",
       icon: jaklingkoIcon,
-      link: "/pilih-kendaraan/jaklingko",
+      link: "jaklingko",
     },
     {
       title: "LRT",
       icon: lrtIcon,
-      link: "/pilih-kendaraan/lrt",
+      link: "lrt",
     },
     {
       title: "DAMRI",
       icon: damriIcon,
-      link: "/pilih-kendaraan/damri",
+      link: "damri",
     },
     {
       title: "KRL Bandara",
       icon: krlbandaraIcon,
-      link: "/pilih-kendaraan/krlbandara",
+      link: "krlbandara",
     },
   ],
 };
@@ -120,5 +120,28 @@ export const DataStations = [
     distance: "4 km",
     status: "Lancar",
     link: "https://maps.app.goo.gl/fg1EPXpDc6ywQbPj7",
+  },
+];
+
+export const DataPlaces = [
+  {
+    title: "Kebun Binatang Ragunan, Jawa Barat",
+    distance: "3km",
+    armada: [transjakartaIcon, krlbandaraIcon, mrtIcon],
+  },
+  {
+    title: "Kebun Binatang Ragunan, Jawa Barat",
+    distance: "3km",
+    armada: [mrtIcon, lrtIcon],
+  },
+  {
+    title: "Kebun Binatang Ragunan, Jawa Barat",
+    distance: "3km",
+    armada: [krlbandaraIcon, jaklingkoIcon],
+  },
+  {
+    title: "Kebun Binatang Ragunan, Jawa Barat",
+    distance: "3km",
+    armada: [jaklingkoIcon],
   },
 ];

@@ -6,6 +6,7 @@ import SearchBar from "../../components/SearchBar/Index";
 import NearStation from "./NearStation";
 import ArmadaCategory from "../../components/ArmadaCategory/Index";
 import { ListsArmadaCategory } from "../../datas";
+import TrendingPlace from "./TrendingPlace";
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
             <SearchBar />
             <ArmadaCategory datas={ListsArmadaCategory.several} />
             <NearStation />
+            <TrendingPlace />
           </section>
         </Layout>
       </div>
