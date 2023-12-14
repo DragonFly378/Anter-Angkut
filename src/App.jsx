@@ -5,6 +5,7 @@ import AkunPage from "./pages/Account/Index";
 import PilihArmada from "./pages/PilihArmada/Index";
 import ArmadaStation from "./pages/ArmadaStation/Index";
 import PlaceSearch from "./pages/Tempat/PlaceSearch";
+import StationPage from "./pages/Station/Index";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/search-place" element={<PlaceSearch />} />
             <Route path="/search-place/:placeName" element={<PlaceSearch />} />
             <Route path="/account" element={<AkunPage />} />
+            <Route path="/:type/:stationName" element={<StationPage />} />
           </Routes>
         </BrowserRouter>
       </div>

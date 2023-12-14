@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const StationCard = ({ itemIdx, data }) => {
+const StationCard = ({ itemIdx, data, isLink }) => {
+  // console.log(data);
+
   return (
     <>
       <div
@@ -13,7 +15,7 @@ const StationCard = ({ itemIdx, data }) => {
             <div className="desc flex flex-col w-7/12  my-auto">
               {" "}
               <div className="nama-stasiun text-base font-bold truncate">
-                {" "}
+                {data.type == "stasiun" ? "St " : "Halte "}
                 {data.title}
               </div>
               <div className="jarak-stasiun text-sm font-medium">
@@ -32,9 +34,18 @@ const StationCard = ({ itemIdx, data }) => {
               </div>
             </div>
           </div>
-          <div className="lihat-stasiun col-span-1 my-auto text-xs text-right underline underline-offset-2">
-            <Link to={data.link}>Lihat stasiun</Link>
-          </div>
+          {isLink && (
+            <div className="lihat-stasiun col-span-1 my-auto text-xs text-right underline underline-offset-2">
+              <Link
+                to={{
+                  pathname: `/${data.type}/${data.title}`,
+                }}
+                state={data}
+              >
+                Lihat stasiun
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </>

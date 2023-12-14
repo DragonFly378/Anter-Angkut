@@ -3,9 +3,9 @@ import Layout from "../../layout";
 import { RotateLoader } from "react-spinners";
 import { useLocation, useParams } from "react-router-dom";
 import LoadingSpinner from "../../components/LoadingSpinner/Index";
-import Stations from "../../components/Stations/Index";
+import Stations from "../../components/ListStations/Index";
 import { DataPlaces, DataStations } from "../../datas";
-import Places from "../../components/Places/Index";
+import Places from "../../components/ListPlaces/Index";
 import SearchBar from "../../components/SearchBar/Index";
 
 const PlaceSearch = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import Stations from "../../components/Stations/Index";
+import Stations from "../../components/ListStations/Index";
 import { DataStations } from "../../datas";
 
 const NearStation = ({ searchValue }) => {

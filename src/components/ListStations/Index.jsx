@@ -23,7 +23,7 @@ const Stations = ({ datas, searchValue, type }) => {
           .map((item, itemIdx) => {
             return (
               <>
-                <StationCard key={itemIdx} data={item} />
+                <StationCard key={itemIdx} data={item} isLink={true} />
               </>
             );
           })}

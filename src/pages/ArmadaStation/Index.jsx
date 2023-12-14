@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "../../layout";
 import SearchBar from "../../components/SearchBar/Index";
-import Stations from "../../components/Stations/Index";
+import Stations from "../../components/ListStations/Index";
 import { DataStations } from "../../datas";
 
 const ArmadaStation = () => {
   const [searchValue, setSearchValue] = useState("");
   const { category } = useParams();
-  const { stationvalue } = useParams();
+  // const { stationvalue } = useParams();
   // console.log(category);
   // console.log(stationvalue);
 
