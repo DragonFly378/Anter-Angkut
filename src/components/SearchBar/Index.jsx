@@ -30,7 +30,9 @@ const SearchBar = ({ placeholder, searchValue, setSearchValue }) => {
       `${
         root == null
           ? `search-place/${searchInput}`
-          : `/${root}/${category}/${searchInput}`
+          : `/${root}/${
+              category ? `${category}/${searchInput}` : `${searchInput}`
+            }`
       }`
     );
   };
