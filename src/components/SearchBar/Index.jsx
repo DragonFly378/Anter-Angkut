@@ -3,7 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-const SearchBar = ({ placeholder, searchValue, setSearchValue }) => {
+const SearchBar = ({
+  placeholder,
+  searchValue,
+  setSearchValue,
+  setIsGetSearch,
+  isGetSearch,
+}) => {
   const navigate = useNavigate();
   const location = useLocation();
   const { category } = useParams();
@@ -25,6 +31,7 @@ const SearchBar = ({ placeholder, searchValue, setSearchValue }) => {
 
   const onSearch = (e) => {
     e.preventDefault();
+    setIsGetSearch(true);
     setSearchValue(searchInput);
     navigate(
       `${
@@ -39,10 +46,20 @@ const SearchBar = ({ placeholder, searchValue, setSearchValue }) => {
 
   useEffect(() => {
     setSearchInput(searchValue);
-    console.log(pathname);
-    console.log(root);
-    console.log(category);
+    // console.log(pathname);
+    // console.log(root);
+    // console.log(category);
   }, []);
+
+  useEffect(() => {
+    // Simulating an asynchronous operation
+    const delay = setTimeout(() => {
+      setIsGetSearch(false);
+      clearTimeout(delay);
+    }, 500);
+
+    return () => clearTimeout(delay);
+  }, [isGetSearch]); // useEffect runs only once on mount
 
   return (
     <form

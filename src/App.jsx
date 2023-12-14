@@ -2,8 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import HomePage from "./pages/Home";
 import AkunPage from "./pages/Account/Index";
-import PilihArmada from "./pages/PilihArmada/Index";
-import ArmadaStation from "./pages/ArmadaStation/Index";
+import PilihArmada from "./pages/Schedules/Index";
+import ArmadaStation from "./pages/Station/StationSearch";
 import PlaceSearch from "./pages/Tempat/PlaceSearch";
 import StationPage from "./pages/Station/Index";
 

@@ -1,6 +1,6 @@
-const LoadingSpinner = ({ isLoading, Loader, color, size }) => {
+const LoadingSpinner = ({ isLoading, Loader, color, size, style }) => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className={style}>
       <Loader
         color={color}
         // css={override}

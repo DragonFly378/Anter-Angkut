@@ -42,7 +42,7 @@ const StationCard = ({ itemIdx, data, isLink }) => {
                 }}
                 state={data}
               >
-                Lihat stasiun
+                Lihat {data.type == "stasiun" ? "stasiun " : "halte "}
               </Link>
             </div>
           )}

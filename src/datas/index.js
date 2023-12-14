@@ -161,13 +161,13 @@ export const Kendaraan = {
       },
       {
         id: "#E32A10",
-        rute: "Kota - Kota",
+        rute: "Bogor - Kota",
         destination: "Bogor",
         currentPos: "Mangga Besar",
       },
       {
         id: "#A12E44",
-        rute: "Kota - Bogor",
+        rute: "Bogor - Kota",
         destination: "Bogor",
         currentPos: "Sawah Besar",
       },
@@ -179,33 +179,22 @@ export const Kendaraan = {
         destination: "Kota",
         currentPos: "Lenteng Agung",
       },
-      {
-        id: "#B32E33",
-        rute: "Kota - Cikarang",
-        destination: "Kota",
-        currentPos: "Klender",
-      },
+
       {
         id: "#E32A10",
-        rute: "Kota - Kota",
+        rute: "Bogor - Kota",
         destination: "Bogor",
         currentPos: "Mangga Besar",
       },
       {
         id: "#A12E44",
-        rute: "Kota - Bogor",
-        destination: "Bogor",
-        currentPos: "Sawah Besar",
+        rute: "Kota - Cikarang",
+        destination: "Cikarang",
+        currentPos: "Pangeran Jayakarta",
       },
     ],
     cikini: [
       {
-        id: "#A12E44",
-        rute: "Bogor - Kota",
-        destination: "Kota",
-        currentPos: "Lenteng Agung",
-      },
-      {
         id: "#B32E33",
         rute: "Kota - Cikarang",
         destination: "Kota",
@@ -213,15 +202,9 @@ export const Kendaraan = {
       },
       {
         id: "#E32A10",
-        rute: "Kota - Kota",
+        rute: "Bogor - Kota",
         destination: "Bogor",
         currentPos: "Mangga Besar",
-      },
-      {
-        id: "#A12E44",
-        rute: "Kota - Bogor",
-        destination: "Bogor",
-        currentPos: "Sawah Besar",
       },
     ],
     bogor: [
@@ -233,20 +216,14 @@ export const Kendaraan = {
       },
       {
         id: "#B32E33",
-        rute: "Kota - Cikarang",
-        destination: "Kota",
-        currentPos: "Klender",
-      },
-      {
-        id: "#E32A10",
-        rute: "Kota - Kota",
+        rute: "Tn Abang - Bogor",
         destination: "Bogor",
-        currentPos: "Mangga Besar",
+        currentPos: "Sudirman",
       },
       {
         id: "#A12E44",
-        rute: "Kota - Bogor",
-        destination: "Bogor",
+        rute: "Bogor - Kota",
+        destination: "Kota",
         currentPos: "Sawah Besar",
       },
     ],
@@ -259,21 +236,21 @@ export const Kendaraan = {
       },
       {
         id: "#B32E33",
-        rute: "Kota - Cikarang",
-        destination: "Kota",
-        currentPos: "Klender",
+        rute: "Kota - Tangerang",
+        destination: "Tangerang",
+        currentPos: "Pesing",
       },
       {
         id: "#E32A10",
-        rute: "Kota - Kota",
-        destination: "Bogor",
+        rute: "Kota - Cikarang",
+        destination: "Kota",
         currentPos: "Mangga Besar",
       },
       {
         id: "#A12E44",
-        rute: "Kota - Bogor",
-        destination: "Bogor",
-        currentPos: "Sawah Besar",
+        rute: "Bogor - Kota",
+        destination: "Kota",
+        currentPos: "Pasar Minggu",
       },
     ],
     gondangdia: [
@@ -297,7 +274,7 @@ export const Kendaraan = {
       },
       {
         id: "#A12E44",
-        rute: "Kota - Bogor",
+        rute: "Bogor - Kota",
         destination: "Bogor",
         currentPos: "Sawah Besar",
       },
@@ -323,7 +300,7 @@ export const Kendaraan = {
       },
       {
         id: "#A12E44",
-        rute: "Kota - Bogor",
+        rute: "Bogor - Kota",
         destination: "Bogor",
         currentPos: "Sawah Besar",
       },
@@ -349,7 +326,7 @@ export const Kendaraan = {
       },
       {
         id: "#A12E44",
-        rute: "Kota - Bogor",
+        rute: "Bogor - Kota",
         destination: "Bogor",
         currentPos: "Sawah Besar",
       },

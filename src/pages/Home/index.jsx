@@ -13,7 +13,7 @@ const HomePage = () => {
   const [searchValue, setSearchValue] = useState("");
   const location = useLocation();
   const pathname = location.pathname;
-
+  const [isGetSearch, setIsGetSearch] = useState(false);
 
   return (
     <>
@@ -26,6 +26,8 @@ const HomePage = () => {
               searchValue={searchValue}
               setSearchValue={setSearchValue}
               root={pathname}
+              setIsGetSearch={setIsGetSearch}
+              isGetSearch={isGetSearch}
             />
             <ArmadaCategory datas={ListsArmadaCategory.several} />
             <NearStation searchValue={searchValue} />
