@@ -13,6 +13,9 @@ const PlaceSearch = () => {
   const [searchValue, setSearchValue] = useState("");
 
   const location = useLocation();
+  const pathname = location.pathname;
+
+  console.log(pathname);
 
   const { placeName } = useParams();
   // console.log(placeName);
@@ -28,7 +31,7 @@ const PlaceSearch = () => {
   }, []); // useEffect runs only once on mount
 
   useEffect(() => {
-    console.log(location.state);
+    // console.log(location.state);
     if (placeName) {
       setSearchValue(placeName);
     }
@@ -55,6 +58,7 @@ const PlaceSearch = () => {
                   placeholder={placeName}
                   searchValue={searchValue}
                   setSearchValue={setSearchValue}
+                  root={pathname}
                 />
 
                 {placeName ? (

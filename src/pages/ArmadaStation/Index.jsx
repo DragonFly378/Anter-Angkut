@@ -8,7 +8,9 @@ import { DataStations } from "../../datas";
 const ArmadaStation = () => {
   const [searchValue, setSearchValue] = useState("");
   const { category } = useParams();
-  console.log(category);
+  const { stationvalue } = useParams();
+  // console.log(category);
+  // console.log(stationvalue);
 
   return (
     <>

@@ -17,7 +17,7 @@ function App() {
             <Route path="/armada/" element={<PilihArmada />} />
             <Route path="/armada/:category" element={<ArmadaStation />} />
             <Route
-              path="/armada/:category/:armada"
+              path="/armada/:category/:stationvalue"
               element={<ArmadaStation />}
             />
             <Route path="/search-place" element={<PlaceSearch />} />

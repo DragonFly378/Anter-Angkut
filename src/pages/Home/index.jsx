@@ -7,9 +7,13 @@ import NearStation from "./NearStation";
 import ArmadaCategory from "../../components/ArmadaCategory/Index";
 import { ListsArmadaCategory } from "../../datas";
 import TrendingPlace from "./TrendingPlace";
+import { useLocation } from "react-router-dom";
 
 const HomePage = () => {
   const [searchValue, setSearchValue] = useState("");
+  const location = useLocation();
+  const pathname = location.pathname;
+
 
   return (
     <>
@@ -21,6 +25,7 @@ const HomePage = () => {
               placeholder={"Mau kemana hari ini?"}
               searchValue={searchValue}
               setSearchValue={setSearchValue}
+              root={pathname}
             />
             <ArmadaCategory datas={ListsArmadaCategory.several} />
             <NearStation searchValue={searchValue} />

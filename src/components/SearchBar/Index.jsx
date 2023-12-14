@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 const SearchBar = ({ placeholder, searchValue, setSearchValue }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { category } = useParams();
+
   const pathname = location.pathname;
+
+  // Split the pathname by '/'
+  const pathParts = pathname.split("/").filter((part) => part !== "");
+
+  // Get the root part (first non-empty part)
+  const root = pathParts.length > 0 ? pathParts[0] : null;
 
   const [searchInput, setSearchInput] = useState("");
 
@@ -18,12 +26,20 @@ const SearchBar = ({ placeholder, searchValue, setSearchValue }) => {
   const onSearch = (e) => {
     e.preventDefault();
     setSearchValue(searchInput);
-    navigate(`${pathname == "/" ? "search-place" : pathname}/${searchInput}`);
+    navigate(
+      `${
+        root == null
+          ? `search-place/${searchInput}`
+          : `/${root}/${category}/${searchInput}`
+      }`
+    );
   };
 
   useEffect(() => {
     setSearchInput(searchValue);
     console.log(pathname);
+    console.log(root);
+    console.log(category);
   }, []);
 
   return (
