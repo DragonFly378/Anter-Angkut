@@ -61,9 +61,9 @@ const DataStations = [
     title: "Cikini",
     distance: "2 km",
     status: "Lancar",
-    type: "stasiun",
-    armada: "commuterline",
-    kendaraan: Kendaraan["commuterline"],
+    type: "halte",
+    armada: "jaklingko",
+    kendaraan: Kendaraan["jaklingko"],
   },
   {
     title: "Gondangdia",

@@ -7,6 +7,49 @@ const ListStations = ({ datas, searchValue, type, root }) => {
   const location = useLocation();
   const pathname = location.pathname;
   console.log(searchValue);
+
+  // jika dihalaman (pilih armada) / (ada tipenya) maka tidak di slice menjadi 4 array
+  const result = type
+    ? datas
+        ?.filter((item) => {
+          if (type) {
+            return (
+              item.title.toLowerCase().includes(searchValue?.toLowerCase()) &&
+              (item.type.toLowerCase().includes(type?.toLowerCase()) ||
+                item.armada.toLowerCase().includes(type?.toLowerCase()))
+            );
+          }
+          return item.title.toLowerCase().includes(searchValue?.toLowerCase());
+        })
+        .map((item, itemIdx) => {
+          return (
+            <>
+              {console.log(item)}
+              <StationCard key={itemIdx} data={item} isLink={true} />
+            </>
+          );
+        })
+    : datas
+        ?.filter((item) => {
+          if (type) {
+            return (
+              item.title.toLowerCase().includes(searchValue?.toLowerCase()) &&
+              (item.type.toLowerCase().includes(type?.toLowerCase()) ||
+                item.armada.toLowerCase().includes(type?.toLowerCase()))
+            );
+          }
+          return item.title.toLowerCase().includes(searchValue?.toLowerCase());
+        })
+        .slice(0, 4)
+        .map((item, itemIdx) => {
+          return (
+            <>
+              {console.log(item)}
+              <StationCard key={itemIdx} data={item} isLink={true} />
+            </>
+          );
+        });
+
   return (
     <>
       <div className="lists-station flex flex-col gap-y-3 mx-auto w-full">
@@ -37,30 +80,7 @@ const ListStations = ({ datas, searchValue, type, root }) => {
                 .toLowerCase()
                 .includes(searchValue?.toLowerCase());
             }).length > 0 ? (
-              datas
-                ?.filter((item) => {
-                  if (type) {
-                    return (
-                      item.title
-                        .toLowerCase()
-                        .includes(searchValue?.toLowerCase()) &&
-                      (item.type.toLowerCase().includes(type?.toLowerCase()) ||
-                        item.armada.toLowerCase().includes(type?.toLowerCase()))
-                    );
-                  }
-                  return item.title
-                    .toLowerCase()
-                    .includes(searchValue?.toLowerCase());
-                })
-                .slice(0, 4)
-                .map((item, itemIdx) => {
-                  return (
-                    <>
-                      {console.log(item)}
-                      <StationCard key={itemIdx} data={item} isLink={true} />
-                    </>
-                  );
-                })
+              result
             ) : (
               <>
                 {!root && (
