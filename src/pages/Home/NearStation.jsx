@@ -1,6 +1,6 @@
 import React from "react";
-import Stations from "../../components/ListStations/Index";
-import { DataStations } from "../../datas";
+import DataStations from "../../datas/stasiun";
+import ListStations from "../../components/ListStations/Index";
 
 const NearStation = ({ searchValue }) => {
   return (
@@ -9,7 +9,7 @@ const NearStation = ({ searchValue }) => {
         <h2 className="title leading-[normal] text-[20px] font-bold mb-3">
           Stasiun / Halte terdekat kamu
         </h2>
-        <Stations datas={DataStations} searchValue={searchValue} />
+        <ListStations datas={DataStations} searchValue={searchValue} />
       </div>
     </>
   );

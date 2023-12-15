@@ -15,7 +15,11 @@ const StationCard = ({ itemIdx, data, isLink }) => {
             <div className="desc flex flex-col w-7/12  my-auto">
               {" "}
               <div className="nama-stasiun text-base font-bold truncate">
-                {data.type == "stasiun" ? "St " : "Halte "}
+                {data.type == "stasiun"
+                  ? "St "
+                  : data.armada == "jaklingko"
+                  ? "Jaklingko "
+                  : "Halte "}
                 {data.title}
               </div>
               <div className="jarak-stasiun text-sm font-medium">

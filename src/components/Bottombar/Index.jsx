@@ -1,7 +1,9 @@
 import React from "react";
-import { bottombars, DataStations } from "../../datas";
+
 import { Link } from "react-router-dom";
 import "./bottombar.scss";
+import { bottombars } from "../../datas";
+import DataStations from "../../datas/stasiun";
 
 const Bottombar = ({ active }) => {
   // console.log(active);
@@ -36,7 +38,7 @@ const ButtonBottomBar = ({ icon, text, target, active }) => {
     ${active !== "/" && active === target && `bg-blue-soft `}`}
     >
       <div className="icon">
-        <img src={icon} alt="icon-bottombar" className="icon-img w-9" />
+        <img src={icon} alt="icon-bottombar" className="icon-img w-8" />
         {/* {icon} */}
       </div>
       <span className="text-xs">{text}</span>

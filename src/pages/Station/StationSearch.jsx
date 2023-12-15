@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "../../layout";
 import SearchBar from "../../components/SearchBar/Index";
-import Stations from "../../components/ListStations/Index";
-import { DataStations } from "../../datas";
 import LoadingSpinner from "../../components/LoadingSpinner/Index";
 import { RotateLoader } from "react-spinners";
+import DataStations from "../../datas/stasiun";
+import ListStations from "../../components/ListStations/Index";
 
 const ArmadaStation = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -73,7 +73,7 @@ const ArmadaStation = () => {
                     <h2 className="title leading-[normal] text-[20px] font-bold mb-3">
                       {category ? "Stasiun / Halte" : "Stasiun terdekat kamu"}
                     </h2>
-                    <Stations
+                    <ListStations
                       datas={DataStations}
                       searchValue={searchValue}
                       type={category}

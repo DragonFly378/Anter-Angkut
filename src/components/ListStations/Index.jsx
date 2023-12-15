@@ -3,13 +3,13 @@ import "./station.scss";
 import StationCard from "./StationCard";
 import { useLocation } from "react-router-dom";
 
-const Stations = ({ datas, searchValue, type }) => {
+const ListStations = ({ datas, searchValue, type, root }) => {
   const location = useLocation();
   const pathname = location.pathname;
-  console.log(datas);
+  console.log(searchValue);
   return (
     <>
-      <div className="lists-station flex flex-col gap-y-3 mx-auto">
+      <div className="lists-station flex flex-col gap-y-3 mx-auto w-full">
         {pathname == "/" ? (
           <>
             {datas?.slice(0, 4).map((item, itemIdx) => {
@@ -33,6 +33,9 @@ const Stations = ({ datas, searchValue, type }) => {
                     item.armada.toLowerCase().includes(type?.toLowerCase()))
                 );
               }
+              return item.title
+                .toLowerCase()
+                .includes(searchValue?.toLowerCase());
             }).length > 0 ? (
               datas
                 ?.filter((item) => {
@@ -60,10 +63,11 @@ const Stations = ({ datas, searchValue, type }) => {
                 })
             ) : (
               <>
-                {" "}
-                <div className="not-found text-center">
-                  Maaf data {type} tidak ditemukan
-                </div>
+                {!root && (
+                  <div className="not-found text-center">
+                    Maaf data {type} tidak ditemukan
+                  </div>
+                )}
               </>
             )}
           </>
@@ -73,4 +77,4 @@ const Stations = ({ datas, searchValue, type }) => {
   );
 };
 
-export default Stations;
+export default ListStations;

@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PlaceCard = ({ itemIdx, data }) => {
+const PlaceCard = ({ itemIdx, data, isLink }) => {
   return (
     <>
       <div
         key={itemIdx}
         className="place-card w-full mx-auto px-3 py-5 rounded-lg text-tertiary"
       >
-        <div className="content grid grid-cols-6 mx-auto gap-x-2">
-          <div className="data-stasiun col-span-4">
+        <div className="content grid grid-cols-8 mx-auto gap-x-2">
+          <div className="data-stasiun col-span-5">
             <div className="desc my-auto flex flex-col">
               {" "}
               <div className="nama-stasiun text-base font-bold truncate">
@@ -22,9 +22,13 @@ const PlaceCard = ({ itemIdx, data }) => {
               </div>
             </div>
           </div>
-          <div className="lihat-stasiun ml-3 col-span-2 my-auto">
+          <div className="lihat-stasiun ml-3 col-span-3 my-auto">
             <div className="flex flex-col">
-              <div className="icon-transport flex gap-x-1 mb-1">
+              <div
+                className={`icon-transport flex gap-x-1 mb-1 ${
+                  !isLink && "mx-auto gap-x-2"
+                } `}
+              >
                 {data.armada.map((armada, armadaIdx) => {
                   return (
                     <>
@@ -32,18 +36,22 @@ const PlaceCard = ({ itemIdx, data }) => {
                         key={armadaIdx}
                         src={armada}
                         alt="icon rute"
-                        className="w-5"
+                        className={`${isLink ? "w-5" : "w-6"}`}
                       />
                     </>
                   );
                 })}
               </div>
-              <Link
-                className="my-auto text-xs underline underline-offset-2"
-                to={data.link}
-              >
-                Lihat rute
-              </Link>
+
+              {isLink && (
+                <Link
+                  className="my-auto text-xs "
+                  to={`/tempat/${data.id}`}
+                  state={data}
+                >
+                  Lihat stasiun terdekat
+                </Link>
+              )}
             </div>
           </div>
         </div>

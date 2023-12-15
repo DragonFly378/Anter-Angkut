@@ -4,8 +4,8 @@ import LocationIcon from "../../assets/icons/location_map.svg";
 const SummaryToday = () => {
   return (
     <>
-      <div className="summary-today mt-3 bg-white grid grid-cols-8 px-4 py-8 gap-x-1 rounded-xl ">
-        <div className="desc col-span-6 flex flex-col text-hitam my-auto pr-1">
+      <div className="summary-today mt-3 bg-white grid grid-cols-10 px-4 py-8 gap-x-2 rounded-xl ">
+        <div className="desc col-span-7 flex flex-col text-hitam my-auto pr-1">
           <div className="name truncate font-extrabold text-lg">
             Hi, Muhammad Hafiz Hisbullah
           </div>
@@ -21,19 +21,19 @@ const SummaryToday = () => {
             </div>
           </div>
         </div>
-        <div className="weather-information col-span-2 flex gap-x-2 items-center text-primary ">
-          <div className="line stroke-primary stroke-[2px]">
+        <div className="weather-information col-span-2 flex gap-x-3 items-center text-primary ">
+          <div className="line stroke-primary stroke-[1px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="2"
-              height="55"
+              height="50"
               viewBox="0 0 2 55"
               fill="none"
             >
               <path
                 d="M1 1L1 54"
                 stroke="#01215B"
-                strokeWidth="2"
+                strokeWidth="1"
                 strokeLinecap="round"
               />
             </svg>

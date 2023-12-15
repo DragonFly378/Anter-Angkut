@@ -3,10 +3,11 @@ import Layout from "../../layout";
 import { RotateLoader } from "react-spinners";
 import { useLocation, useParams } from "react-router-dom";
 import LoadingSpinner from "../../components/LoadingSpinner/Index";
-import Stations from "../../components/ListStations/Index";
-import { DataPlaces, DataStations } from "../../datas";
 import Places from "../../components/ListPlaces/Index";
 import SearchBar from "../../components/SearchBar/Index";
+import DataPlaces from "../../datas/tempat";
+import DataStations from "../../datas/stasiun";
+import ListStations from "../../components/ListStations/Index";
 
 const PlaceSearch = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -99,10 +100,10 @@ const PlaceSearch = () => {
                             ? "Stasiun / Halte"
                             : "Stasiun terdekat kamu"}
                         </h2>
-                        <Stations
+                        <ListStations
                           datas={DataStations}
                           searchValue={searchValue}
-                          type="stasiun"
+                          // type="stasiun"
                         />
                       </div>
                     </>

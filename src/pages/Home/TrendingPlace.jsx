@@ -1,6 +1,6 @@
 import React from "react";
 import Places from "../../components/ListPlaces/Index";
-import { DataPlaces } from "../../datas";
+import DataPlaces from "../../datas/tempat";
 
 const TrendingPlace = ({ searchValue }) => {
   return (

@@ -5,9 +5,9 @@ import SummaryToday from "./SummaryToday";
 import SearchBar from "../../components/SearchBar/Index";
 import NearStation from "./NearStation";
 import ArmadaCategory from "../../components/ArmadaCategory/Index";
-import { ListsArmadaCategory } from "../../datas";
 import TrendingPlace from "./TrendingPlace";
 import { useLocation } from "react-router-dom";
+import { ListsArmadaCategory } from "../../datas";
 
 const HomePage = () => {
   const [searchValue, setSearchValue] = useState("");

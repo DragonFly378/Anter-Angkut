@@ -43,13 +43,14 @@ const StationPage = () => {
                 {type}
               </h2>
               <div className="current-station mt-3">
-                <StationCard data={data} isLink={true} />
+                <StationCard data={data} />
               </div>
 
               <div className="armada-avail mt-6">
                 <h2 className="title leading-[normal] mb-3 text-[20px] font-bold capitalize">
                   Armada yang tersedia
                 </h2>
+
                 <ListArmadas
                   datas={data.kendaraan[`${stationName.toLocaleLowerCase()}`]}
                 />
