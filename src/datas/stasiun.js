@@ -132,7 +132,7 @@ const DataStations = [
   {
     title: "Cawang",
     distance: "4 km",
-    status: "Padat",
+    status: "Lancar",
     type: "stasiun",
     armada: "lrt",
     kendaraan: Kendaraan["lrt"],
@@ -162,6 +162,14 @@ const DataStations = [
     kendaraan: Kendaraan["commuterline"],
   },
   {
+    title: "Kebon Bawang",
+    distance: "13 km",
+    status: "lancar",
+    type: "halte",
+    armada: "transjakarta",
+    kendaraan: Kendaraan["transjakarta"],
+  },
+  {
     title: "Cikunir",
     distance: "7 km",
     status: "Padat",
@@ -172,7 +180,7 @@ const DataStations = [
   {
     title: "Indomaret Fatmawati",
     distance: "4 km",
-    status: "Padat",
+    status: "lancar",
     type: "stasiun",
     armada: "mrt",
     kendaraan: Kendaraan["mrt"],
